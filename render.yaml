@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: n8n-cloud
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: N8N_BASIC_AUTH_USER
+        value: sanrasta
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: Bogota11!!
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: N8N_PORT
+        value: 5678
