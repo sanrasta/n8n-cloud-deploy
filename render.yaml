@@ -12,9 +12,9 @@ services:
       n8n start
     envVars:
       - key: N8N_BASIC_AUTH_USER
-        value: yourusername
+        value: sanrasta
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: yourpassword
+        value: Bogota11!!
       - key: N8N_HOST
         value: 0.0.0.0
       - key: N8N_PORT
@@ -22,4 +22,4 @@ services:
       - key: N8N_USER_MANAGEMENT_DISABLED
         value: 'true'
       - key: N8N_AUTH_EXCLUDE_ENDPOINTS
-        value: '*'
+        value: '*' 
