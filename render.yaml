@@ -2,14 +2,22 @@ services:
   - type: web
     name: n8n-cloud
     env: docker
-    plan: free
+    plan: starter # $7/month plan
     autoDeploy: true
+    disk:
+      name: n8n-data
+      mountPath: /home/node/.n8n
+      sizeGB: 1
     envVars:
       - key: N8N_BASIC_AUTH_USER
-        value: sanrasta
+        value: yourusername
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: Bogota11!!
-      - key: N8N_AUTH_EXCLUDE_ENDPOINTS
-        value: '*'
+        value: yourpassword
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: N8N_PORT
+        value: 5678
       - key: N8N_USER_MANAGEMENT_DISABLED
         value: 'true'
+      - key: N8N_AUTH_EXCLUDE_ENDPOINTS
+        value: '*'
