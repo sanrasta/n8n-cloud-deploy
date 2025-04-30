@@ -2,12 +2,14 @@ services:
   - type: web
     name: n8n-cloud
     env: docker
-    plan: starter # $7/month plan
+    plan: starter
     autoDeploy: true
     disk:
       name: n8n-data
       mountPath: /home/node/.n8n
       sizeGB: 1
+    startCommand: >
+      n8n start
     envVars:
       - key: N8N_BASIC_AUTH_USER
         value: yourusername
