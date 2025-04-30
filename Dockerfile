@@ -1,4 +1,12 @@
-
 FROM n8nio/n8n
-ENV TZ=America/Chicago
-Expose 5678
+
+ENV N8N_BASIC_AUTH_USER=yourusername \
+    N8N_BASIC_AUTH_PASSWORD=yourpassword \
+    N8N_HOST=0.0.0.0 \
+    N8N_PORT=5678 \
+    N8N_USER_MANAGEMENT_DISABLED=true \
+    N8N_AUTH_EXCLUDE_ENDPOINTS=*
+
+EXPOSE 5678
+
+CMD ["n8n", "start"]
