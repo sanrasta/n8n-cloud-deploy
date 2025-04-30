@@ -9,7 +9,7 @@ services:
         value: sanrasta
       - key: N8N_BASIC_AUTH_PASSWORD
         value: Bogota11!!
-      - key: N8N_HOST
-        value: 0.0.0.0
-      - key: N8N_PORT
-        value: 5678
+      - key: N8N_AUTH_EXCLUDE_ENDPOINTS
+        value: '*'
+      - key: N8N_USER_MANAGEMENT_DISABLED
+        value: 'true'
